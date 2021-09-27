@@ -3,7 +3,7 @@ Unit tests for the fizzbuzz program
 '''
 
 # import the code to be tested
-from fizzbuzz import fizz
+from fizzbuzz import fizz, buzz
 
 def describe_a_fizzbuzz_program_that():
 
@@ -26,3 +26,18 @@ def describe_a_fizzbuzz_program_that():
         assert fizz(4) == 4
         assert fizz(9) == 'fizz'
         assert fizz(17) == 17
+        assert fizz(15) == 'fizz'
+        assert fizz(5) == 5
+
+    def takes_a_numeric_input_and_returns_buzz_if_it_is_a_multiple_of_5():
+        '''
+        We need a function that can take a single input and that
+        returns a value which could either be "buzz" or just whatever
+        the input was to begin with.
+        '''
+        assert buzz(5) == 'buzz'
+        assert buzz(4) == 4
+        assert buzz(10) == 'buzz'
+        assert buzz(17) == 17
+        assert buzz(15) == 'buzz'
+        assert buzz(3) == 3
